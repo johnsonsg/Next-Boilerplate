@@ -5,17 +5,17 @@ import { MetaData } from '../../types/metadata';
 
 const AboutPage: React.FC = () => {
   const metaData: MetaData = {
-    title: 'About Run Tech Academy',
+    title: 'About Us',
     description:
-      'Learn more about Run Tech Academy and how we can help you become a successful running back.',
+      'About Next.js Starter Template with TypeScript, ESLint, Prettier, and Husky',
     // Add more metadata attributes as needed
   };
 
   return (
     <Layout metaData={metaData}>
-      <h1>About Run Tech Academy</h1>
+      <h1>About Us</h1>
       <p>
-        Run Tech Academy is a premier online learning platform that teaches the fundamentals of being a successful running back. Our courses are designed by professional running backs and coaches to help you improve your skills and take your game to the next level.
+        Next.js Starter Template with TypeScript, ESLint, Prettier, and Husky
       </p>
     </Layout>
   );

@@ -5,9 +5,9 @@ import { MetaData } from "../types/metadata";
 
 const HomePage: React.FC = () => {
   const metaData: MetaData = {
-    title: "Run Tech Academy",
+    title: "Home Page",
     description:
-      "Learn the fundamentals of being a successful running back at Run Tech Academy.",
+      "Welcome to Next.js Starter Template with TypeScript, ESLint, Prettier, and Husky",
     // Add more metadata attributes as needed
   };
 
