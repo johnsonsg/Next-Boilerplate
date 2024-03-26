@@ -18,8 +18,10 @@ const Layout: React.FC<LayoutProps> = ({ metaData, children }) => {
         {/* Add more meta tags as needed */}
       </Head>
       <Header />
-      <main className="flex-grow">{children}</main>
-      <Footer />
+      <main className="flex-grow flex justify-center items-center">
+        {children}
+      </main>
+      <Footer className="flex justify-center items-center" />
     </div>
   );
 };

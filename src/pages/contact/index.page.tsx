@@ -1,7 +1,6 @@
-// pages/contact.page.tsx
-
 import { useState, ChangeEvent, FormEvent } from 'react';
 import { TextField, Button, Typography, Container, Box } from '@mui/material';
+import Layout from '../../components/Layout';
 
 interface FormData {
   name: string;
@@ -31,53 +30,60 @@ const ContactPage = () => {
     alert('Form submitted successfully!');
   };
 
+  const metaData = {
+    title: 'Contact Us',
+    description: 'Get in touch with us',
+  };
+
   return (
-    <Container maxWidth="sm">
-      <Box mt={4}>
-        <Typography variant="h3" align="center" gutterBottom>Contact Us</Typography>
-        <form onSubmit={handleSubmit}>
-          <TextField
-            label="Name"
-            variant="outlined"
-            fullWidth
-            margin="normal"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-          <TextField
-            label="Email"
-            variant="outlined"
-            fullWidth
-            margin="normal"
-            id="email"
-            name="email"
-            type="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-          <TextField
-            label="Message"
-            variant="outlined"
-            fullWidth
-            margin="normal"
-            id="message"
-            name="message"
-            multiline
-            rows={4}
-            value={formData.message}
-            onChange={handleChange}
-            required
-          />
-          <Button type="submit" variant="contained" color="primary" size="large">
-            Submit
-          </Button>
-        </form>
-      </Box>
-    </Container>
+    <Layout metaData={metaData}>
+      <Container maxWidth="md">
+        <Box mt={4} display="flex" flexDirection="column" alignItems="center">
+          <Typography variant="h3" align="center" gutterBottom>Contact Us</Typography>
+          <form onSubmit={handleSubmit} style={{ width: '100%' }}>
+            <TextField
+              label="Name"
+              variant="outlined"
+              fullWidth
+              margin="normal"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+            <TextField
+              label="Email"
+              variant="outlined"
+              fullWidth
+              margin="normal"
+              id="email"
+              name="email"
+              type="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+            <TextField
+              label="Message"
+              variant="outlined"
+              fullWidth
+              margin="normal"
+              id="message"
+              name="message"
+              multiline
+              rows={4}
+              value={formData.message}
+              onChange={handleChange}
+              required
+            />
+            <Button type="submit" variant="contained" color="primary" size="large">
+              Submit
+            </Button>
+          </form>
+        </Box>
+      </Container>
+    </Layout>
   );
 };
 

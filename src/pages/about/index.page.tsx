@@ -1,7 +1,9 @@
-// Create About Page
+// pages/about/index.page.tsx
+
 import React from 'react';
 import Layout from '../../components/Layout';
 import { MetaData } from '../../types/metadata';
+import { Typography, Container } from '@mui/material';
 
 const AboutPage: React.FC = () => {
   const metaData: MetaData = {
@@ -13,10 +15,12 @@ const AboutPage: React.FC = () => {
 
   return (
     <Layout metaData={metaData}>
-      <h1>About Us</h1>
-      <p>
-        Next.js Starter Template with TypeScript, ESLint, Prettier, and Husky
-      </p>
+      <Container maxWidth="md">
+        <Typography variant="h3" gutterBottom>About Us</Typography>
+        <Typography variant="body1">
+          Next.js Starter Template with TypeScript, ESLint, Prettier, and Husky
+        </Typography>
+      </Container>
     </Layout>
   );
 };
